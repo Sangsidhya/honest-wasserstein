@@ -36,7 +36,7 @@ On the included simulated screen (12 drugs, half with no effect, 30 dimensions):
 ## Install
 
 ```bash
-git clone https://github.com/<your-username>/honest-wasserstein.git
+git clone https://github.com/Sangsidhya/honest-wasserstein.git
 cd honest-wasserstein
 pip install -e ".[app]"
 ```
