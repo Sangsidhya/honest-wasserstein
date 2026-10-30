@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "honestw"
+version = "0.1.0"
+description = "Certified effect sizes for comparing groups of cells: finite-sample confidence bounds for Wasserstein distances"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Sangsidhya Kar" }]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "pandas>=1.5",
+    "scikit-learn>=1.1",
+    "pot>=0.9",
+]
+keywords = ["optimal transport", "Wasserstein distance", "confidence intervals", "single-cell", "perturbation screens"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.30", "altair>=5", "anndata>=0.9"]
+h5ad = ["anndata>=0.9"]
+dev = ["pytest>=7"]
+
+[project.urls]
+Paper = "https://doi.org/10.2139/ssrn.7620318"
+
+[tool.setuptools]
+packages = ["honestw"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
